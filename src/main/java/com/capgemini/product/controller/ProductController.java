@@ -64,7 +64,7 @@ public class ProductController {
 	
 	@GetMapping("/product/name")
 	public ResponseEntity<List<Product>> findProductByName(@RequestParam String name){
-       return new 		
+       return new ResponseEntity<List<Product>>(productService.findProductsByName(name),HttpStatus.OK);		
 		
 	}
 
